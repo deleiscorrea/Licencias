@@ -12,10 +12,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/uploads', express.static('uploads'))
 
-// Rutas
 app.use('/api/licencias', licenciasRoutes)
 
-// Conexión a MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Conectado a MongoDB')

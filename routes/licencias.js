@@ -3,7 +3,6 @@ const router = express.Router()
 import multer from 'multer'
 import Licencia from '../models/Licencia.js'
 
-// Configuración de multer para subir archivos
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, 'uploads/'),
   filename: (req, file, cb) => cb(null, Date.now() + '-' + file.originalname)
