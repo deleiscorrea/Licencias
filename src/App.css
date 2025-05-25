@@ -144,39 +144,39 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
-  .formulario {
-    padding: 1.5rem;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 0; 
-    box-shadow: none; 
-  }
+    .formulario {
+        padding: 1.5rem;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 0; 
+        box-shadow: none; 
+    }
 
-  .motivoArchivo {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-  }
+    .motivoArchivo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
 
-  .archivo {
-    width: 100%;
-  }
+    .archivo {
+        width: 100%;
+    }
 
-  .desdeHasta {
-    flex-direction: column;
-    gap: 1rem;
-  }
+    .desdeHasta {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-  input[type="date"] {
-    width: 100%;
-  }
+    input[type="date"] {
+        width: 100%;
+    }
 
-  .errorFecha {
-    top: 49rem;
-}
+    .errorFecha {
+        top: 49rem;
+    }
 
-  button[type="submit"] {
-    width: 50%;
-    margin: 0;
-  }
+    button[type="submit"] {
+        width: 50%;
+        margin: 0;
+    }
 }
