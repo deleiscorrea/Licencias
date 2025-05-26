@@ -13,11 +13,6 @@ const procesarLicencia = async (req, res) => {
     const apellidoLimpio = apellido.trim()
 
     const nombreRegex = /^[a-zA-ZÁÉÍÓÚáéíóúÑñ \-']+$/
-
-    console.log('Nombre:', nombreLimpio, 'Apellido:', apellidoLimpio)
-    console.log('Regex test nombre:', nombreRegex.test(nombreLimpio))
-    console.log('Regex test apellido:', nombreRegex.test(apellidoLimpio))
-
     if (!nombreRegex.test(nombreLimpio) || !nombreRegex.test(apellidoLimpio)) {
       return res.status(400).json({ error: 'Nombre o apellido inválido. Solo se permiten letras y espacios.' })
     }

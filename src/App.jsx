@@ -3,6 +3,7 @@ import axios from 'axios'
 import './App.css'
 
 function App() {
+  const [errorNombreApellido, setErrorNombreApellido] = useState('')
   const [desde, setDesde] = useState('')
   const [hasta, setHasta] = useState('')
   const [errorFecha, setErrorFecha] = useState('')
@@ -24,8 +25,14 @@ function App() {
       form.reset()
       setDesde('')
       setHasta('')
+      setErrorNombreApellido('')
     } catch (err) {
-      alert('Error al enviar el formulario.')
+      const mensaje = err.response?.data?.error
+      if (mensaje === 'Nombre o apellido inválido. Solo se permiten letras y espacios.') {
+        setErrorNombreApellido("Nombre y apellido solo permiten letras, espacios, guiones y apóstrofes.")
+      } else {
+        alert('Error al enviar el formulario.')
+      }
     }
   }
   
@@ -37,11 +44,27 @@ function App() {
         <form onSubmit={handleSubmit} action="/enviar" method="post">
           <div className="apellidoNombre">
             <label htmlFor="apellido">APELLIDO</label>
-            <input type="text" name="apellido" id="apellido" required />
+            <input
+              type="text" 
+              name="apellido" 
+              id={errorNombreApellido ? 'inputTextoError' : ''}
+              onChange={() => setErrorNombreApellido('')} 
+              required 
+            />
 
             <label htmlFor="nombre">NOMBRE</label>
-            <input type="text" name="nombre" id="nombre" required />
+            <input
+              type="text"
+              name="nombre" 
+              id={errorNombreApellido ? 'inputTextoError' : ''}
+              onChange={() => setErrorNombreApellido('')} 
+              required 
+            />
           </div>
+
+          {errorNombreApellido && (
+            <p className="errorNombreApellido">{errorNombreApellido}</p>
+          )}
 
           <div className="motivoArchivo">
             <div className="motivo">

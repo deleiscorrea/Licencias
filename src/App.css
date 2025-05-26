@@ -114,6 +114,16 @@ input[type="date"] {
     justify-content: space-between;
 }
 
+.errorNombreApellido {
+    color: red;
+    position: absolute;
+    top: 20rem;
+}
+
+#inputTextoError {
+    border: 2px solid red;
+}
+
 .errorFecha {
     color: red;
     position: absolute;
@@ -121,7 +131,7 @@ input[type="date"] {
 }
 
 #inputFechaError {
-  border: 2px solid red;
+    border: 2px solid red;
 }
 
 button[type="submit"] {
