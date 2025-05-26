@@ -27,10 +27,6 @@ h1 {
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
 }
 
-form > div {
-    margin-bottom: 1.5rem;
-}
-
 label {
     display: block;
     margin-top: 0.5rem; 
@@ -80,7 +76,6 @@ input[type="date"] {
 .motivo > label {
     font-weight: bold;
     color: #333;
-    margin-bottom: 0.5rem;
 }
 
 .motivoArchivo {
@@ -88,7 +83,7 @@ input[type="date"] {
     justify-content: space-between;
     gap: 2rem;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
 }
 
 .archivo {
@@ -112,12 +107,12 @@ input[type="date"] {
 .desdeHasta {
     display: flex;
     justify-content: space-between;
+    margin-top: 1.5rem;
 }
 
 .errorNombreApellido {
     color: red;
-    position: absolute;
-    top: 20rem;
+    margin-top: 1rem;
 }
 
 #inputTextoError {
@@ -126,8 +121,6 @@ input[type="date"] {
 
 .errorFecha {
     color: red;
-    position: absolute;
-    top: 37rem;
 }
 
 #inputFechaError {
@@ -154,12 +147,32 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
     .formulario {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    .nombre {
+        margin-top: 1rem;
+    }
+
+    .desdeHasta {
+        flex-direction: column;
+    }
+
+    .desdeHasta label {
+        margin-bottom: 1rem;
+    }
+
+    input[type="date"] {
         width: 100%;
-        margin: 0 auto;
-        border-radius: 0; 
-        box-shadow: none; 
     }
 
     .motivoArchivo {
@@ -172,21 +185,8 @@ button[type="submit"]:hover {
         width: 100%;
     }
 
-    .desdeHasta {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    input[type="date"] {
-        width: 100%;
-    }
-
-    .errorFecha {
-        top: 49rem;
-    }
-
     button[type="submit"] {
-        width: 50%;
-        margin: 0;
+        width: 100%;
+        margin-left: 0;
     }
 }

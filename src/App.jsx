@@ -52,7 +52,7 @@ function App() {
               required 
             />
 
-            <label htmlFor="nombre">NOMBRE</label>
+            <label htmlFor="nombre" className='nombre'>NOMBRE</label>
             <input
               type="text"
               name="nombre" 
@@ -98,7 +98,10 @@ function App() {
               name="desde" 
               id={errorFecha ? 'inputFechaError' : ''}
               value={desde} 
-              onChange={e => setDesde(e.target.value)} 
+              onChange={e => {
+                setDesde(e.target.value)
+                if (errorFecha) setErrorFecha('')
+              }}
               required
             />
 
@@ -108,7 +111,10 @@ function App() {
               name="hasta" 
               id={errorFecha ? 'inputFechaError' : ''}
               value={hasta} 
-              onChange={e => setHasta(e.target.value)} 
+              onChange={e => {
+                setHasta(e.target.value)
+                if (errorFecha) setErrorFecha('')
+              }}
               required
             />
           </div>
