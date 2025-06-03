@@ -17,5 +17,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 router.post('/', upload.single('archivo'), licenciasController.procesarLicencia)
+router.get('/ultima', licenciasController.obtenerUltimaLicencia)
+router.get('/', licenciasController.obtenerLicencias)
+router.delete('/:id', licenciasController.eliminarLicencia)
 
 export default router

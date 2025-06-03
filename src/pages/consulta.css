@@ -1,0 +1,75 @@
+body {
+  background-color: #c0c0c0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  border: 2px solid #808080;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+}
+
+h2 {
+  background-color: #000080;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #000000;
+  text-align: center;
+}
+
+.info-box {
+  background-color: #dcdcdc;
+  padding: 1rem;
+  border: 2px solid #a0a0a0;
+  margin-bottom: 1rem;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+}
+
+.info-box p {
+  margin: 0.5rem 0;
+}
+
+.radioOpcion label {
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 0.3rem; 
+  cursor: pointer;
+}
+
+.radioOpcion {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+label:not(.radioOpcion label) {
+  font-weight: bold;
+}
+
+button {
+  background-color: #800000;
+  border: 2px solid #000;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 2px 2px #fff, -2px -2px #000;
+  color: white;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #d4d0c8;
+  border-color: #808080;
+  color: black;
+}
+
+.eliminar {
+    text-align: right;
+
+}

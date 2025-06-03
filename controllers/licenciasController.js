@@ -81,6 +81,46 @@ const procesarLicencia = async (req, res) => {
   }
 }
 
+const obtenerLicencias = async (req, res) => {
+  try {
+    const licencias = await Licencia.find().sort({ createdAt: -1 })
+    res.status(200).json(licencias)
+  } catch (error) {
+    console.error('Error al obtener licencias:', error)
+    res.status(500).json({ error: 'Error al obtener las licencias.' })
+  }
+}
+
+const obtenerUltimaLicencia = async (req, res) => {
+  try {
+    const ultima = await Licencia.findOne().sort({ createdAt: -1 })
+    if (!ultima) return res.status(404).json({ error: 'No hay licencias registradas.' })
+    res.status(200).json(ultima)
+  } catch (error) {
+    console.error('Error al obtener la última licencia:', error)
+    res.status(500).json({ error: 'Error al obtener la última licencia.' })
+  }
+}
+
+const eliminarLicencia = async (req, res) => {
+  try {
+    const { id } = req.params
+    const licenciaEliminada = await Licencia.findByIdAndDelete(id)
+
+    if (!licenciaEliminada) {
+      return res.status(404).json({ error: 'Licencia no encontrada.' })
+    }
+
+    res.status(200).json({ mensaje: 'Licencia eliminada correctamente.' })
+  } catch (error) {
+    console.error('Error al eliminar licencia:', error)
+    res.status(500).json({ error: 'Error al eliminar la licencia.' })
+  }
+}
+
 export default {
-  procesarLicencia
+  procesarLicencia,
+  obtenerLicencias,
+  obtenerUltimaLicencia,
+  eliminarLicencia
 }
