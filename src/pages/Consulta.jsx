@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import "./Consulta.css"
+import ".consulta.css"
 
 function Consulta() {
   const [licencia, setLicencia] = useState(null)
