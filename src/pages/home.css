@@ -1,0 +1,140 @@
+body {
+  background-color: #c0c0c0;
+  font-family: "Courier New", Courier, monospace;
+  padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #000080;
+    color: white;
+    padding: 0.5rem;
+    border: 2px solid #000;
+    margin-bottom: 1.5rem;
+    width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario {
+  max-width: 40rem;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border: 2px solid #808080;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+
+
+input[type="text"] {
+  width: 97%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #a0a0a0;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+  background-color: #dcdcdc;
+}
+
+input[type="file"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #a0a0a0;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+  background-color: #dcdcdc;
+  margin-top: 2rem;
+}
+
+input[type="date"] {
+    width: 14rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #a0a0a0;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+  background-color: #dcdcdc;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  accent-color: #000080;
+}
+
+
+
+.motivoArchivo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.motivo {
+    width: 14rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #a0a0a0;
+  box-shadow: inset 2px 2px white, inset -2px -2px #808080;
+  background-color: #dcdcdc;
+}
+
+.motivo label {
+    margin-top: 0rem;
+}
+
+.apellidoNombre,
+.desdeHasta {
+  margin-top: 1rem;
+}
+
+.errorNombreApellido,
+.errorFecha {
+  color: red;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#inputTextoError,
+#inputFechaError {
+  border: 2px solid red;
+}
+
+.desdeHasta {
+    display: flex;
+    justify-content: space-between;
+}
+
+button[type="submit"] {
+  margin-top: 3rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #000080;
+  border: 2px solid #000;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 2px 2px #fff, -2px -2px #000;
+  color: white;
+  width: 10rem;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #d4d0c8;
+  border-color: #808080;
+  color: black;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
